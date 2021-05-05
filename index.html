@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Google Faq</title>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="header-top-image">
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" alt="Google Logo">
+                </div>
+                <div class="header-top-text">
+                    Privacy & Termini
+                </div>
+            </div>
+            <div class="header-bottom">
+                <ul>
+                    <li>Introduzione</li>
+                    <li>Norme sulla privacy</li>
+                    <li>Termini di servizio</li>
+                    <li>Tecnologie</li>
+                    <li class="active">Domande frequenti</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+	<div id="app">
+
+		<section>
+			<div class="question-container">
+				<div v-for="faq in faqs">
+					<h2>{{ faq.domanda }}</h2>
+					<div v-html="faq.risposta"></div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<footer>
+
+	</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
